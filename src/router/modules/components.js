@@ -1,94 +1,100 @@
-/** When your routing table is too long, you can split it into small modules**/
+/** When your routing table is too long, you can split it into small modules **/
 
-import Layout from '@/views/layout/Layout'
+import Layout from '@/layout'
 
 const componentsRouter = {
   path: '/components',
   component: Layout,
-  redirect: 'noredirect',
-  name: 'component-demo',
+  redirect: 'noRedirect',
+  name: 'ComponentDemo',
   meta: {
-    title: 'components',
+    title: 'Components',
     icon: 'component'
   },
   children: [
     {
       path: 'tinymce',
       component: () => import('@/views/components-demo/tinymce'),
-      name: 'tinymce-demo',
-      meta: { title: 'tinymce' }
+      name: 'TinymceDemo',
+      meta: { title: 'Tinymce' }
     },
     {
       path: 'markdown',
       component: () => import('@/views/components-demo/markdown'),
-      name: 'markdown-demo',
-      meta: { title: 'markdown' }
+      name: 'MarkdownDemo',
+      meta: { title: 'Markdown' }
     },
     {
       path: 'json-editor',
-      component: () => import('@/views/components-demo/jsonEditor'),
-      name: 'jsonEditor-demo',
-      meta: { title: 'jsonEditor' }
+      component: () => import('@/views/components-demo/json-editor'),
+      name: 'JsonEditorDemo',
+      meta: { title: 'JSON Editor' }
     },
     {
-      path: 'splitpane',
-      component: () => import('@/views/components-demo/splitpane'),
-      name: 'splitpane-demo',
-      meta: { title: 'splitPane' }
+      path: 'split-pane',
+      component: () => import('@/views/components-demo/split-pane'),
+      name: 'SplitpaneDemo',
+      meta: { title: 'SplitPane' }
     },
     {
       path: 'avatar-upload',
-      component: () => import('@/views/components-demo/avatarUpload'),
-      name: 'avatarUpload-demo',
-      meta: { title: 'avatarUpload' }
+      component: () => import('@/views/components-demo/avatar-upload'),
+      name: 'AvatarUploadDemo',
+      meta: { title: 'Upload' }
     },
     {
       path: 'dropzone',
       component: () => import('@/views/components-demo/dropzone'),
-      name: 'dropzone-demo',
-      meta: { title: 'dropzone' }
+      name: 'DropzoneDemo',
+      meta: { title: 'Dropzone' }
     },
     {
       path: 'sticky',
       component: () => import('@/views/components-demo/sticky'),
-      name: 'sticky-demo',
-      meta: { title: 'sticky' }
+      name: 'StickyDemo',
+      meta: { title: 'Sticky' }
     },
     {
       path: 'count-to',
-      component: () => import('@/views/components-demo/countTo'),
-      name: 'countTo-demo',
-      meta: { title: 'countTo' }
+      component: () => import('@/views/components-demo/count-to'),
+      name: 'CountToDemo',
+      meta: { title: 'Count To' }
     },
     {
       path: 'mixin',
       component: () => import('@/views/components-demo/mixin'),
-      name: 'componentMixin-demo',
-      meta: { title: 'componentMixin' }
+      name: 'ComponentMixinDemo',
+      meta: { title: 'Component Mixin' }
     },
     {
       path: 'back-to-top',
-      component: () => import('@/views/components-demo/backToTop'),
-      name: 'backToTop-demo',
-      meta: { title: 'backToTop' }
+      component: () => import('@/views/components-demo/back-to-top'),
+      name: 'BackToTopDemo',
+      meta: { title: 'Back To Top' }
     },
     {
       path: 'drag-dialog',
-      component: () => import('@/views/components-demo/dragDialog'),
-      name: 'dragDialog-demo',
-      meta: { title: 'dragDialog' }
+      component: () => import('@/views/components-demo/drag-dialog'),
+      name: 'DragDialogDemo',
+      meta: { title: 'Drag Dialog' }
+    },
+    {
+      path: 'drag-select',
+      component: () => import('@/views/components-demo/drag-select'),
+      name: 'DragSelectDemo',
+      meta: { title: 'Drag Select' }
     },
     {
       path: 'dnd-list',
-      component: () => import('@/views/components-demo/dndList'),
-      name: 'dndList-demo',
-      meta: { title: 'dndList' }
+      component: () => import('@/views/components-demo/dnd-list'),
+      name: 'DndListDemo',
+      meta: { title: 'Dnd List' }
     },
     {
       path: 'drag-kanban',
-      component: () => import('@/views/components-demo/dragKanban'),
-      name: 'dragKanban-demo',
-      meta: { title: 'dragKanban' }
+      component: () => import('@/views/components-demo/drag-kanban'),
+      name: 'DragKanbanDemo',
+      meta: { title: 'Drag Kanban' }
     }
   ]
 }
